@@ -1,7 +1,8 @@
-FROM docker.io/node:18
+FROM docker.io/node:16
 
 ENV NODE_ENV production
 ENV PORT 3000
+ENV npm_config_cache /tmp/npm
 
 WORKDIR /usr/src/app
 
