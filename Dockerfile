@@ -8,6 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install --production && npm cache clean --force
 COPY . .
+RUN chown -R 1000690000:0 /usr/src/app/.npm
 
 EXPOSE 3000
 
