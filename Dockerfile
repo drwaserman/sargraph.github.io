@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install --production && chown -R node:node /usr/src/app
 COPY . .
-RUN chown -R node:node /usr/src/app
+RUN rm -rf node:node /usr/src/app/.npm
 
 EXPOSE 3000
 
